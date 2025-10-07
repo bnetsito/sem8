@@ -42,6 +42,7 @@
      Console.WriteLine("EL NUMERO FACTORIAL ES: ");
      Console.WriteLine($"{z}! = {factor}");
  }
+
 //ejemplo 4//
 int a, b, c;
 int mayor;
