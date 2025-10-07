@@ -1,1 +1,44 @@
+ //ejemplos 2//
+ static int potencia(int x, int b)
+ {
+     int resultado = 1;
+     for (int i = 0; i < b; i++)
+     {
+         resultado *= x;
+     }
+     return resultado;
+ }
+ static void Main(string[] args)
+ {
+     Console.WriteLine("INGRESE LA BASE DEL NUMERO:");
+     Console.WriteLine();
+     Console.WriteLine("INGRESE EL NUMERO DE LA BASE:");
+     int BASE = int.Parse(Console.ReadLine());
+     Console.WriteLine("INGRESE EL NUMERO DEL EXPONENTE:");
+     int exp = int.Parse(Console.ReadLine());
 
+     Console.WriteLine("el total es :");
+     Console.WriteLine($"{BASE}^{exp} = {potencia(BASE, exp)}");
+ }
+
+ //ejemplo 3//
+ static long Factorial(int z)
+ {
+     z = 0;
+     long resultado = 1;
+     for (int i = 2; i <= z; i++)
+     {
+         resultado *= i;
+     }
+     return resultado;
+ }
+ static void Main()
+ {
+     Console.WriteLine("ingrese el numero:");
+     int z = int.Parse(Console.ReadLine());
+
+     long factor = Factorial(z);
+
+     Console.WriteLine("EL NUMERO FACTORIAL ES: ");
+     Console.WriteLine($"{z}! = {factor}");
+ }
