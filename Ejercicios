@@ -106,3 +106,71 @@ if ((c < b && c > a) && (c > b && c < a))
 Console.WriteLine("El mayor es: ", mayor);
 Console.WriteLine("El menor es: ", menor);
 Console.WriteLine("El intermedio es: ", medio);
+
+ejercico 5
+static double Potencia(double baseNum, int exponente)
+        {
+            double resultado = 1;
+            for (int i = 0; i < exponente; i++)
+            {
+                resultado *= baseNum;
+            }
+            return resultado;
+        }
+
+        static double Factorial(int num)
+        {
+            double resultado = 1;
+            for (int i = 1; i <= num; i++)
+            {
+                resultado *= i;
+            }
+            return resultado;
+        }
+
+        static void Main(string[] args)
+        {
+            Console.Write("Ingresar límite (n): ");
+            int n = int.Parse(Console.ReadLine());
+
+            double s = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                s += Potencia(i, i) / Factorial(i);
+            }
+
+            Console.WriteLine("S = " + s);
+        }
+    }
+
+ejercicio 6
+    static int num1;
+    static int num2;
+
+    static void Main(string[] args)
+    {
+        Ingresar();
+        int resultado = Sumar();
+        Imprimir(resultado);
+    }
+
+    static void Ingresar()
+    {
+        Console.Write("Ingresar N1: ");
+        num1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Ingresar N2: ");
+        num2 = int.Parse(Console.ReadLine());
+    }
+
+    static int Sumar()
+    {
+        return num1 + num2;
+    }
+
+    static void Imprimir(int suma)
+    {
+        Console.WriteLine("La suma es: " + suma);
+    }
+}
+
