@@ -42,3 +42,66 @@
      Console.WriteLine("EL NUMERO FACTORIAL ES: ");
      Console.WriteLine($"{z}! = {factor}");
  }
+//ejemplo 4//
+int a, b, c;
+int mayor;
+int menor;
+int medio;
+
+Console.WriteLine("Ingrese N° 1: ");
+a = int.Parse(Console.ReadLine());
+Console.WriteLine("Ingrese N° 2: ");
+b = int.Parse(Console.ReadLine());
+Console.WriteLine("Ingrese N° 3: ");
+c = int.Parse(Console.ReadLine());
+
+if (a > b && a > c)
+{
+    mayor = a;
+}
+else
+{
+    if (b > c)
+    {
+        mayor = b;
+    }
+    else
+    {
+        mayor = c;
+    }
+}
+
+if (a < b && a < c)
+{
+    menor = a;
+}
+else
+{
+    if (b < c)
+    {
+        menor = b;
+    }
+    else
+    {
+        menor = c;
+    }
+}
+
+if ((a < b && a > c) && (a > b && a < c))
+{
+    medio = a;
+}
+
+if ((b < a && b > c) && (b > a && b < c))
+{
+    medio = b;
+}
+
+if ((c < b && c > a) && (c > b && c < a))
+{
+    medio = c;
+}
+
+Console.WriteLine("El mayor es: ", mayor);
+Console.WriteLine("El menor es: ", menor);
+Console.WriteLine("El intermedio es: ", medio);
